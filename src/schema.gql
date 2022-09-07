@@ -1,0 +1,40 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Asset {
+  id: String!
+  fileName: String!
+  type: String!
+  owner: String!
+  score: String!
+  discription: String!
+}
+
+type Query {
+  getAllAssests: [Asset!]!
+  findOne(id: String!): Asset!
+}
+
+type Mutation {
+  createAsset(assetInput: AssetCreateDTO!): Asset!
+  updateAsset(asset: UpdateAssetInput!): Asset!
+  removeAsset(id: String!): Asset!
+}
+
+input AssetCreateDTO {
+  fileName: String!
+  type: String!
+  owner: String!
+  score: String!
+  discription: String!
+}
+
+input UpdateAssetInput {
+  id: String!
+  fileName: String!
+  type: String!
+  owner: String!
+  score: String!
+  discription: String!
+}
